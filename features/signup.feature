@@ -3,6 +3,7 @@ Feature: Signup
   As a user
   I want to signup
 
+  @signup
   Scenario: Signup to Dashku
     Given I am on the homepage
     And I follow "Signup"
@@ -16,6 +17,7 @@ Feature: Signup
     And there should be a user with username "paulbjensen"
     And I should be on the dashboard page
 
+  @signup
   Scenario: Fail to Signup (username already taken)
     Given a user exists with username "paulbjensen" and email "paulbjensen@gmail.com" and password "123456"
     Given I am on the homepage
@@ -28,6 +30,7 @@ Feature: Signup
     Then the field "username" should be ""
     And the field "username" placeholder should be "username is already taken"
 
+  @signup
   Scenario: Fail to Signup (email already taken)
     Given a user exists with username "paulbjensen" and email "paulbjensen@gmail.com" and password "123456"
     Given I am on the homepage
@@ -39,6 +42,7 @@ Feature: Signup
     Then the field "email" should be ""
     And the field "email" placeholder should be "email is already taken"
 
+  @signup
   Scenario: Fail to Signup (password not long enough)
     Given a user exists with username "paulbjensen" and email "paulbjensen@gmail.com" and password "123456"
     Given I am on the homepage
