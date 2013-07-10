@@ -18,6 +18,9 @@ World = (callback) ->
   
     if browser is null
       selenium (err, selenium) =>
+
+        throw err if err?
+
         process.on 'exit', -> selenium.kill()
  
         browser = soda.createClient
