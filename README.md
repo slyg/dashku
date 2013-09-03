@@ -54,6 +54,8 @@ To run the integration tests:
 
     npm run-script cuke
 
+smalltest
+
 License & Credits
 ---
 
